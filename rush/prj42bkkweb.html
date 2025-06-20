@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial Education and Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1, #f06292);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .profile-pic {
+            transition: all 0.3s ease;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen font-sans">
+    <!-- Navigation Bar -->
+    <nav class="bg-white bg-opacity-80 backdrop-blur-md shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-pink-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-pink-600">BRO THIS IS MY 42BKKPROJECT</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex items-center space-x-8">
+                    <a href="#" class="text-pink-600 hover:text-pink-800 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About</a>
+                    <a href="#programs" class="text-gray-600 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Programs</a>
+                    <a href="#team" class="text-gray-600 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Team</a>
+                    <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300 shadow-lg" id="contactBtn">ติดต่อ</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-pink-600 focus:outline-none transition duration-150 ease-in-out">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden bg-white" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-pink-600">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-pink-600">About</a>
+                <a href="#programs" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-pink-600">Programs</a>
+                <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-pink-600">Team</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-pink-500 hover:bg-pink-600">ติดต่อ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content - Home Page -->
+    <div class="pt-16 pb-12 px-4 sm:px-6 lg:px-8">
+        <!-- Hero Section -->
+        <section class="py-12 md:py-20 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6">
+                    WELCOM TO <span class="text-pink-600">SIET</span> KMITL
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">
+                    Innovation in Industrial Education & Technology
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#team" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors duration-300 shadow-lg">
+                        ติดต่อ
+                    </a>
+                    <a href="#programs" class="bg-white hover:bg-gray-100 text-pink-600 px-8 py-3 rounded-md text-lg font-medium transition-colors duration-300 shadow-lg">
+                        EXPLORE PROGRAMS
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white bg-opacity-90 rounded-xl shadow-xl my-12 p-8">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    ABOUT OUR FACULTY
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385240858013597858/-600x400_1.png?ex=68555995&is=68540815&hm=e71b95712bb12454c91b5de439fc7fd78ac327911e52367fc4c93d7401655570&" 
+                             alt="Faculty Building" 
+                             class="rounded-xl shadow-lg w-full h-auto">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                            Faculty of Industrial Education and Technology
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี มหาวิทยาลัยของเรา มุ่งมั่นผลิตบัณฑิตที่มีคุณภาพซึ่งสามารถผสมผสานความรู้ทางเทคนิคเข้ากับความเชี่ยวชาญด้านการศึกษา เรามุ่งเน้นการพัฒนาวิธีการสอนที่สร้างสรรค์และการประยุกต์ใช้เทคโนโลยีในการศึกษาด้านอุตสาหกรรม
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            วิสัยทัศน์ของเราคือการเป็นสถาบันชั้นนำด้านการศึกษาด้านอุตสาหกรรมและเทคนิคที่ได้รับการยอมรับทั้งในประเทศและต่างประเทศในด้านความเป็นเลิศในการสอน การวิจัย และการมีส่วนร่วมของชุมชน
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-user-graduate text-pink-500 text-xl mr-2"></i>
+                                <span class="text-gray-600">777M+ Graduates</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-chalkboard-teacher text-pink-500 text-xl mr-2"></i>
+                                <span class="text-gray-600">30K+ Faculty Members</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-flask text-pink-500 text-xl mr-2"></i>
+                                <span class="text-gray-600">Modern Labs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="py-16">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-white mb-12">
+                    OUR PRGRAMS
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Program 1 -->
+                    <div class="bg-white bg-opacity-90 rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300">
+                        <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385392475157565581/--1.png?ex=6855e6c9&is=68549549&hm=e35f87cbdabe11cc9f69394c8fa8906a5ed79550925cda878de63029ede9d755&" 
+                             alt="Design Technology" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">
+                                Innovation and Design Technology
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                โปรแกรมนี้มุ่งเน้นการบูรณาการหลักการออกแบบกับนวัตกรรมทางเทคโนโลยี เพื่อเตรียมนักศึกษาให้สามารถสร้างผลิตภัณฑ์และระบบที่เน้นผู้ใช้
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    Design Thinking
+                                </span>
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    CAD/CAM
+                                </span>
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    Prototyping
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 2 -->
+                    <div class="bg-white bg-opacity-90 rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300">
+                        <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385392476243624136/--2.png?ex=6855e6c9&is=68549549&hm=fae5a0ac0fe46b7eadc525444bfc93d75d0e776105ec6d7d8d14231549a1dc9e&" 
+                             alt="Educational Technology" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">
+                                Educational Technology
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                สำรวจจุดตัดระหว่างเทคโนโลยีและการศึกษา เรียนรู้วิธีการออกแบบ นำไปใช้ และประเมินเทคโนโลยีทางการศึกษาสำหรับสภาพแวดล้อมการเรียนรู้ที่หลากหลาย
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    e-Learning
+                                </span>
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    Instructional Design
+                                </span>
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    Learning Analytics
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Program 3 -->
+                    <div class="bg-white bg-opacity-90 rounded-xl shadow-lg overflow-hidden card-hover transition-all duration-300">
+                        <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385392476734619678/--.png?ex=6855e6c9&is=68549549&hm=d21e1e7624584888deb2a4110ff1dd7a24df8ad91b7ac35f6046dc15c753b0f4&" 
+                             alt="Industrial Technology" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">
+                                Industrial Technology
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                เตรียมนักศึกษาในการบูรณาการเทคโนโลยีกับกระบวนการทางอุตสาหกรรม โดยเน้นที่ประสิทธิภาพ ความยั่งยืน และนวัตกรรมในการผลิตและการผลิต
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    Automation
+                                </span>
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    Quality Control
+                                </span>
+                                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                    Lean Manufacturing
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-16 bg-white bg-opacity-90 rounded-xl shadow-xl my-12 p-8">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+                    MEET OUR TEAM
+                </h2>
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+                    พวกเราใช้เวลามากกว่า 168 ปี ทุ่มเทเพื่อที่จะออกแบบเว็ปไซต์นี้ขึ้นมาพวกเรามุ่งมั่นที่จะมอบการศึกษาคุณภาพสูงและส่งเสริมนวัตกรรมในการศึกษาด้านอุตสาหกรรมและเทคโนโลยี
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition-all duration-300">
+                        <div class="p-6">
+                            <div class="flex flex-col md:flex-row items-center gap-6">
+                                <div class="flex-shrink-0">
+                                    <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385240154347933758/IMG_6252.jpg?ex=685558ed&is=6854076d&hm=4318606faca8f3405a269cd98fa5d5a9b5b7232d327aafbd12f76ba71309f214&" 
+                                         alt="Team Member 1" 
+                                         class="h-32 w-32 rounded-full object-cover profile-pic border-4 border-pink-200">
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">
+                                        นส.วิชญาดา วิบูลย์กูล
+                                    </h3>
+                                    <p class="text-pink-600 font-medium mb-2">
+                                        สาขานวัตกรรมและเทคโนโลยีการออกแบบ
+                                    </p>
+                                    <p class="text-gray-600 text-sm mb-4">
+                                        เชี่ยวชาญด้านการออกแบบที่เน้นมนุษย์เป็นศูนย์กลางและการบูรณาการเทคโนโลยีทางการศึกษา โดยมีประสบการณ์ในสาขานี้มากว่า 876 ปี
+                                    </p>
+                                    <a href="member1.html" class="text-pink-600 hover:text-pink-800 font-medium inline-flex items-center transition-colors duration-300">
+                                        View Profile
+                                        <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Member 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition-all duration-300">
+                        <div class="p-6">
+                            <div class="flex flex-col md:flex-row items-center gap-6">
+                                <div class="flex-shrink-0">
+                                    <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385393928315867227/IMG_8296.png?ex=6855e823&is=685496a3&hm=7ced6eeb820af13d42d7b7122de5139fc11e6b40edb17145c197788d76d747bc&" 
+                                         alt="Team Member 2" 
+                                         class="h-32 w-32 rounded-full object-cover profile-pic border-4 border-pink-200">
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-800 mb-1">
+                                        นายเดชชนะ อ่อนเร่ง
+                                    </h3>
+                                    <p class="text-pink-600 font-medium mb-2">
+                                        สาขานวัตกรรมและเทคโนโลยีการออกแบบ
+                                    </p>
+                                    <p class="text-gray-600 text-sm mb-4">
+                                        ผู้เชี่ยวชาญด้านสภาพแวดล้อมการเรียนรู้แบบดิจิทัลและการออกแบบการเรียนการสอนและมีผลงานตีพิมพ์มากมายในสาขานี้ โดยมีประสบการณ์ในสาขานี้มากว่า 980 ปี
+                                    </p>
+                                    <a href="member2.html" class="text-pink-600 hover:text-pink-800 font-medium inline-flex items-center transition-colors duration-300">
+                                        View Profile
+                                        <i class="fas fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="py-16 text-center">
+            <div class="max-w-4xl mx-auto bg-white bg-opacity-90 rounded-xl shadow-xl p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                    READY TO JOIN OUR COMMUNITY?
+                </h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                    ไม่ว่าคุณจะเป็นนักศึกษาที่กำลังศึกษา พันธมิตรในอุตสาหกรรม หรือผู้วิจัย เรายินดีที่จะรับฟังความคิดเห็นจากคุณ ติดต่อเราเพื่อเรียนรู้เพิ่มเติมเกี่ยวกับโปรแกรมและโอกาสต่างๆ ของเรา
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#" class="bg-pink-500 hover:bg-pink-600 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors duration-300 shadow-lg">
+                        ติดต่อ
+                    </a>
+                    <a href="#" class="bg-white hover:bg-gray-100 text-pink-600 px-8 py-3 rounded-md text-lg font-medium transition-colors duration-300 shadow-lg border border-gray-200">
+                        REQUEST INFO
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white bg-opacity-90 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-graduation-cap text-pink-500 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-pink-600">BRO THIS IS MY 42BKKPROJECT</span>
+                    </div>
+                    <p class="mt-2 text-gray-600 text-sm">
+                        Faculty of Industrial Education and Technology Innovation in Industrial Education & Technology
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-800 tracking-wider uppercase mb-4">
+                            Programs
+                        </h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Design Technology</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Educational Tech</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Industrial Tech</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-800 tracking-wider uppercase mb-4">
+                            Resources
+                        </h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Research</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Publications</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Events</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-800 tracking-wider uppercase mb-4">
+                            Connect
+                        </h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Facebook</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">Twitter</a></li>
+                            <li><a href="#" class="text-gray-600 hover:text-pink-600 text-sm transition-colors duration-300">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
+                <div class="flex space-x-6 md:order-2">
+                    <a href="#" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <p class="mt-4 text-sm text-gray-600 md:mt-0 md:order-1">
+                    &copy; 2025 THE TWO OF US ARE RUNNING WILD nxcr_r X sxlmxn_n
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Member Profile 1 Page (would be linked from team section) -->
+    <div id="member1-page" class="hidden fixed inset-0 bg-white bg-opacity-90 z-50 overflow-auto p-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl my-8 overflow-hidden">
+            <!-- Close button -->
+            <div class="flex justify-end p-4">
+                <button class="text-gray-500 hover:text-gray-700 focus:outline-none" id="closeMember1">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Member Profile Content -->
+            <div class="p-8">
+                <!-- Section 1: Header with Image -->
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+                    <div class="flex-shrink-0">
+                        <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385240154347933758/IMG_6252.jpg?ex=685558ed&is=6854076d&hm=4318606faca8f3405a269cd98fa5d5a9b5b7232d327aafbd12f76ba71309f214&" 
+                             alt="Dr. Jane Smith" 
+                             class="h-48 w-48 rounded-full object-cover border-8 border-pink-200 profile-pic">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                            นส.วิชญาดา วิบูลย์กูล
+                        </h1>
+                        <p class="text-xl text-pink-600 font-medium mb-2">
+                            สาขานวัตกรรมและเทคโนโลยีการออกแบบ
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-graduation-cap mr-1"></i> ปริญญาตรีสาขาการออกแบบนวัตกรรม
+                            </span>
+                            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-university mr-1"></i> ประสบการณ์มากกว่า 867 ปี
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 2: About Program -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                        เกี่ยวกับนวัตกรรมและเทคโนโลยีการออกแบบ
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                                ภาพรวมโปรแกรม
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                หลักสูตรนวัตกรรมและเทคโนโลยีการออกแบบมุ่งเน้นที่การบูรณาการการคิดเชิงออกแบบกับนวัตกรรมทางเทคโนโลยี นักศึกษาจะได้เรียนรู้วิธีสร้างผลิตภัณฑ์และระบบที่เน้นผู้ใช้ผ่านโครงการปฏิบัติจริง การเรียนรู้ร่วมกัน และความร่วมมือในอุตสาหกรรม
+                            </p>
+                            <p class="text-gray-600">
+                                แนวทางของเราผสมผสานรากฐานทางทฤษฎีเข้ากับการประยุกต์ใช้ในทางปฏิบัติ เพื่อเตรียมบัณฑิตให้พร้อมสำหรับอาชีพในด้านการออกแบบผลิตภัณฑ์ UX/UI การวิจัยการออกแบบ และการจัดการนวัตกรรม
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                                หลักสูตรแกนกลาง
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>การออกแบบเชิงความคิดและวิธีการ</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>การออกแบบที่เน้นที่มนุษย์</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>การสร้างต้นแบบและการผลิตแบบดิจิทัล</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>การออกแบบเพื่อการผลิต</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>การจัดการนวัตกรรม</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>วัสดุและกระบวนการในการออกแบบ</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 3: Contact -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                        Contact Information
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                Faculty Contact
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-envelope text-pink-500 mt-1 mr-2"></i>
+                                    <span>68030268@kmitl.ac.th</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-phone-alt text-pink-500 mt-1 mr-2"></i>
+                                    <span>(+66) 087-654321</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-2"></i>
+                                    <span>อาคาร จอมไตร, ห้อง 405<br>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                สอบถามข้อมูลโครงการ
+สำหรับข้อมูลเพิ่มเติม
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                เกี่ยวกับโครงการนวัตกรรมและเทคโนโลยีการออกแบบ
+                            </p>
+                            <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-md font-medium transition-colors duration-300">
+                                ติดต่อ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Member Profile 2 Page (would be linked from team section) -->
+    <div id="member2-page" class="hidden fixed inset-0 bg-white bg-opacity-90 z-50 overflow-auto p-4">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl my-8 overflow-hidden">
+            <!-- Close button -->
+            <div class="flex justify-end p-4">
+                <button class="text-gray-500 hover:text-gray-700 focus:outline-none" id="closeMember2">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Member Profile Content -->
+            <div class="p-8">
+                <!-- Section 1: Header with Image -->
+                <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+                    <div class="flex-shrink-0">
+                        <img src="https://cdn.discordapp.com/attachments/1385115915548364941/1385393928315867227/IMG_8296.png?ex=6855e823&is=685496a3&hm=7ced6eeb820af13d42d7b7122de5139fc11e6b40edb17145c197788d76d747bc&" 
+                             alt="Dr. John Doe" 
+                             class="h-48 w-48 rounded-full object-cover border-8 border-pink-200 profile-pic">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-800 mb-2">
+                            นายเดชชนะ อ่อนเร่ง
+                        </h1>
+                        <p class="text-xl text-pink-600 font-medium mb-2">
+                            สาขานวัตกรรมและเทคโนโลยีการออกแบบ
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-graduation-cap mr-1"></i> ปริญญาตรีสาขาการออกแบบนวัตกรรม
+
+                            </span>
+                            <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full text-xs font-medium">
+                                <i class="fas fa-university mr-1"></i> ประสบการณ์มากกว่า 980 ปี
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 2: About Program -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                        เกี่ยวกับนวัตกรรมและเทคโนโลยีการออกแบบ
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                                ภาพรวมโปรแกรม
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                หลักสูตรเทคโนโลยีทางการศึกษามุ่งเน้นการบูรณาการเทคโนโลยีอย่างมีประสิทธิผลในสภาพแวดล้อมการเรียนการสอน เราเตรียมความพร้อมให้กับบัณฑิตในการออกแบบ นำไปใช้ และประเมินเทคโนโลยีทางการศึกษาสำหรับสภาพแวดล้อมที่หลากหลาย
+                            </p>
+                            <p class="text-gray-600">
+                                นักศึกษาได้รับความเชี่ยวชาญในด้านทฤษฎีการเรียนรู้ การออกแบบการเรียนการสอน การผลิตสื่อดิจิทัล และการประเมินเชิงวิพากษ์เทคโนโลยีทางการศึกษาทั้งในบริบทการเรียนรู้แบบทางการและไม่เป็นทางการ
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                                หลักสูตรแกนกลาง
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>รากฐานของเทคโนโลยีการศึกษา</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>การออกแบบการเรียนการสอน</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>ระบบการจัดการการเรียนรู้</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>สื่อดิจิทัลเพื่อการเรียนรู้</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>เทคโนโลยีใหม่ ๆ ในด้านการศึกษา</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-pink-500 mt-1 mr-2 text-sm"></i>
+                                    <span>การประเมินและการวิเคราะห์</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section 3: Contact -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">
+                        Contact Information
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                Faculty Contact
+                            </h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-envelope text-pink-500 mt-1 mr-2"></i>
+                                    <span>Dasechana2005@gmail.com</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-phone-alt text-pink-500 mt-1 mr-2"></i>
+                                    <span>(+66) 098 7654321</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-2"></i>
+                                    <span>อาคาร จอมไตร, ห้อง 405<br>คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                                สอบถามข้อมูลโครงการ สำหรับข้อมูลเพิ่มเติม
+
+                            </h3>
+                            <p class="text-gray-600 mb-4">
+                                เกี่ยวกับโครงการนวัตกรรมและเทคโนโลยีการออกแบบ
+
+
+                            </p>
+                            <a href="#" class="inline-block bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-md font-medium transition-colors duration-300">
+                                ติดต่อ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Contact button functionality
+        document.getElementById('contactBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Contact form would open here! In a real implementation, this would either show a modal or link to a contact page.');
+        });
+
+        // Member profile navigation - would normally link to separate HTML files
+        document.querySelectorAll('[href="member1.html"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('member1-page').classList.remove('hidden');
+            });
+        });
+
+        document.querySelectorAll('[href="member2.html"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('member2-page').classList.remove('hidden');
+            });
+        });
+
+        // Close member profiles
+        document.getElementById('closeMember1').addEventListener('click', function() {
+            document.getElementById('member1-page').classList.add('hidden');
+        });
+
+        document.getElementById('closeMember2').addEventListener('click', function() {
+            document.getElementById('member2-page').classList.add('hidden');
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
